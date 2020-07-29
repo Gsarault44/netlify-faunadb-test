@@ -368,7 +368,17 @@ export default class App extends Component {
           handleModalClose={this.closeModal}
           handleClearCompleted={this.clearCompleted}
         />
-
+        <form name="contact" netlify>
+          <p>
+            <label>Name <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Email <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
 
         <div className="c-block">
           <form onSubmit={this.handelSubmit} method="post" name="test" netlify>
