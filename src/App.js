@@ -371,7 +371,7 @@ export default class App extends Component {
 
 
         <div className="c-block">
-          <form onSubmit={this.handelSubmit} method="post" netlify>
+          <form onSubmit={this.handelSubmit} method="post" name="test" netlify>
             <div>
               <label for="input-first-name">First Name</label>
               <input type="text" name="input-first-name" id="input-first-name" placeholder="FirstName" />
