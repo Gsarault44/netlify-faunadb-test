@@ -326,7 +326,7 @@ export default class App extends Component {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzUxMiIsInYiOiIyLjAiLCJraWQiOiIwYTg2MGE5Mi1iZDUyLTQ1YTctYTllYy05M2Q3ODIyYTU4NjMifQ.eyJ2ZXIiOjcsImF1aWQiOiJjY2JhOGM3MDZiMDkzODQ5MDM4ODBlOThiNzY3N2Q1OSIsImNvZGUiOiI2M1dodXVxajRaXzNpNWtEblE3UWV1ZUFPZnh6V1dGWWciLCJpc3MiOiJ6bTpjaWQ6QlpTbXZ3ckVTSWFlYmJpeEZmYU1VZyIsImdubyI6MCwidHlwZSI6MCwidGlkIjowLCJhdWQiOiJodHRwczovL29hdXRoLnpvb20udXMiLCJ1aWQiOiIzaTVrRG5RN1FldWVBT2Z4eldXRllnIiwibmJmIjoxNTk1OTY1OTg1LCJleHAiOjE1OTU5Njk1ODUsImlhdCI6MTU5NTk2NTk4NSwiYWlkIjoiSFo0VTZHX0FReldrdmpEYmliTE1zQSIsImp0aSI6IjkyNjY3ZDdmLTlhNDYtNDRlYi1hMTU5LTYxZmM4YWE0NmMxNiJ9.XvPa0w13Hf3x7-SqTmlri62wvAw1IDf11wJkN2-MgUnXxLGbYvba-W_eexGp488rsE0wNAp5vE-pYJWF2TwHDw");
     xhr.setRequestHeader("Cookie", "_zm_lang=en-US; zm_gnl_ruid=sd2VKgx_S9Opc_3Xe-LujA; _zm_csp_script_nonce=L18n4_OVToKKn7E2fLzJxw; _zm_mtk_guid=7c1a6feb1dca4fd4936912e1fee91902; zm_cluster=us02; _zm_date_format=mm/dd/yy; _zm_currency=USD; zm_gnl_guid_v2=dffcfwNhG3o4S8V1ppqed77uvkt5iQ/WskSUuPy1ZigaUHFrTHEMTccAxiFUAr0kSbttR5LNKNhqrrfQkk; _zm_page_auth=us02_c_gwVaRlT9SeOTE2xy4-MMMg; _zm_ssid=us02_c_PcO03xJVSgmwn7T_EprZqA; zm_aid=HZ4U6G_AQzWkvjDbibLMsA; zm_haid=221; _zm_cdn_blocked=log_unblk; _marketplace_auth_id=645d6c3b-a0d6-4063-b7b7-e96b84f271b7; cred=3F646BB975240362E7CF4FAF8D269131");
-
+    debugger
     xhr.send(data);
 
     console.log('sent');
