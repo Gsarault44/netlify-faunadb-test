@@ -304,12 +304,12 @@ export default class App extends Component {
   }
   handelSubmit = ({ event }) => {
     console.log('hey')
-    var formData = JSON.stringify({
-      "email": document.getElementById('input-first-name').value,
-      "firstname": document.getElementById('input-first-name').value,
-      "last_name": document.getElementById('input-last-name').value,
-      "phone": document.getElementById('input-phone').value
-    });
+    // var formData = JSON.stringify({
+    //   "email": document.getElementById('input-first-name').value,
+    //   "firstname": document.getElementById('input-first-name').value,
+    //   "last_name": document.getElementById('input-last-name').value,
+    //   "phone": document.getElementById('input-phone').value
+    // });
 
     var data = JSON.stringify({ "email": "guy22@banana", "firstname": "banana", "last_name": "banana", "phone": "5551212125", "job_title": "banana" });
 
@@ -337,7 +337,7 @@ export default class App extends Component {
       <div className='app'>
 
         <AppHeader />
-{/* 
+
         <div className='todo-list'>
           <h2>
             Create todo
@@ -366,7 +366,7 @@ export default class App extends Component {
           showMenu={this.state.showMenu}
           handleModalClose={this.closeModal}
           handleClearCompleted={this.clearCompleted}
-        /> */}
+        />
 
 
         <div className="c-block">
