@@ -311,23 +311,24 @@ export default class App extends Component {
     //   "phone": document.getElementById('input-phone').value
     // });
 
-    var data = JSON.stringify({ "email": "guy22@banana", "firstname": "banana", "last_name": "banana", "phone": "5551212125", "job_title": "banana" });
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzUxMiIsInYiOiIyLjAiLCJraWQiOiJiZjhjODc4ZS1mNDFkLTQzZmMtYmMxZS0xNzZjYWFmMjg2OTAifQ.eyJ2ZXIiOjcsImF1aWQiOiJjY2JhOGM3MDZiMDkzODQ5MDM4ODBlOThiNzY3N2Q1OSIsImNvZGUiOiJCMkwxR3V0dnhiXzNpNWtEblE3UWV1ZUFPZnh6V1dGWWciLCJpc3MiOiJ6bTpjaWQ6QlpTbXZ3ckVTSWFlYmJpeEZmYU1VZyIsImdubyI6MCwidHlwZSI6MCwidGlkIjowLCJhdWQiOiJodHRwczovL29hdXRoLnpvb20udXMiLCJ1aWQiOiIzaTVrRG5RN1FldWVBT2Z4eldXRllnIiwibmJmIjoxNTk2MDMyOTMzLCJleHAiOjE1OTYwMzY1MzMsImlhdCI6MTU5NjAzMjkzMywiYWlkIjoiSFo0VTZHX0FReldrdmpEYmliTE1zQSIsImp0aSI6ImQyOGEwYjU1LWZkOWMtNDQ2ZC05YzUzLTM5ZGY0NjM4NGY5OCJ9.ytOh2X1LrN0QqH2oPDAmnt9V90Nv8CGKM4R3OPkTseRUwTeAX0TX4yIMjhfK9RkFyt2Mk9g3Kt7hjc9KLQb0Pg");
+    myHeaders.append("Cookie", "_zm_lang=en-US; zm_gnl_ruid=sd2VKgx_S9Opc_3Xe-LujA; _zm_csp_script_nonce=L18n4_OVToKKn7E2fLzJxw; _zm_mtk_guid=7c1a6feb1dca4fd4936912e1fee91902; zm_cluster=us02; _zm_date_format=mm/dd/yy; _zm_currency=USD; _marketplace_auth_id=645d6c3b-a0d6-4063-b7b7-e96b84f271b7; cred=ABB0A5204A29B3D0EDFC543258E34679; _zm_page_auth=us02_c_4K7nJ-8tR8KwruPd8s3-mg; _zm_ssid=us02_c_I9OkZDJzRXK8gTzVmAyN-A; zm_aid=HZ4U6G_AQzWkvjDbibLMsA; zm_haid=221");
 
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
+    var raw = JSON.stringify({ "email": "test21sa1qsaqqq22@emai222l", "firstname": "gregAsteqqqt", "last_name": "withA loqqqsqcal", "phone": "2155557212", "job_title": "JumpqqSadr1" });
 
-    xhr.addEventListener("readystatechange", function () {
-      if (this.readyState === 4) {
-        console.log(this.responseText);
-      }
-    });
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
 
-    xhr.open("POST", "https://api.zoom.us/v2/webinars/84840289453/registrants");
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzUxMiIsInYiOiIyLjAiLCJraWQiOiIwYTg2MGE5Mi1iZDUyLTQ1YTctYTllYy05M2Q3ODIyYTU4NjMifQ.eyJ2ZXIiOjcsImF1aWQiOiJjY2JhOGM3MDZiMDkzODQ5MDM4ODBlOThiNzY3N2Q1OSIsImNvZGUiOiI2M1dodXVxajRaXzNpNWtEblE3UWV1ZUFPZnh6V1dGWWciLCJpc3MiOiJ6bTpjaWQ6QlpTbXZ3ckVTSWFlYmJpeEZmYU1VZyIsImdubyI6MCwidHlwZSI6MCwidGlkIjowLCJhdWQiOiJodHRwczovL29hdXRoLnpvb20udXMiLCJ1aWQiOiIzaTVrRG5RN1FldWVBT2Z4eldXRllnIiwibmJmIjoxNTk1OTY1OTg1LCJleHAiOjE1OTU5Njk1ODUsImlhdCI6MTU5NTk2NTk4NSwiYWlkIjoiSFo0VTZHX0FReldrdmpEYmliTE1zQSIsImp0aSI6IjkyNjY3ZDdmLTlhNDYtNDRlYi1hMTU5LTYxZmM4YWE0NmMxNiJ9.XvPa0w13Hf3x7-SqTmlri62wvAw1IDf11wJkN2-MgUnXxLGbYvba-W_eexGp488rsE0wNAp5vE-pYJWF2TwHDw");
-    xhr.setRequestHeader("Cookie", "_zm_lang=en-US; zm_gnl_ruid=sd2VKgx_S9Opc_3Xe-LujA; _zm_csp_script_nonce=L18n4_OVToKKn7E2fLzJxw; _zm_mtk_guid=7c1a6feb1dca4fd4936912e1fee91902; zm_cluster=us02; _zm_date_format=mm/dd/yy; _zm_currency=USD; zm_gnl_guid_v2=dffcfwNhG3o4S8V1ppqed77uvkt5iQ/WskSUuPy1ZigaUHFrTHEMTccAxiFUAr0kSbttR5LNKNhqrrfQkk; _zm_page_auth=us02_c_gwVaRlT9SeOTE2xy4-MMMg; _zm_ssid=us02_c_PcO03xJVSgmwn7T_EprZqA; zm_aid=HZ4U6G_AQzWkvjDbibLMsA; zm_haid=221; _zm_cdn_blocked=log_unblk; _marketplace_auth_id=645d6c3b-a0d6-4063-b7b7-e96b84f271b7; cred=3F646BB975240362E7CF4FAF8D269131");
-    debugger
-    xhr.send(data);
+    fetch("https://api.zoom.us/v2/webinars/84840289453/registrants", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
 
     console.log('sent');
     debugger
